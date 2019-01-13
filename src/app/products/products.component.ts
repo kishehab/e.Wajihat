@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-products',
@@ -6,10 +7,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./products.component.css']
 })
 export class ProductsComponent implements OnInit {
-
-  constructor() { }
+	products = [
+		{id: '1', name:'iPhone'},
+		{id: '2', name:'iPad'},
+		{id: '3', name:'iMac'},
+		{id: '4', name:'iWatch'}
+	]
+  constructor( private router:Router) { }
 
   ngOnInit() {
+  }
+
+  onSelect(product){
+  	this.router.navigate(['/products', product.id]);
   }
 
 }
