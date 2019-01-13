@@ -6,10 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./list.component.css']
 })
 export class ListComponent implements OnInit {
+ 	
+	name = 'khalil';
+  constructor() { 
 
-  constructor() { }
-
+  }
+  	
   ngOnInit() {
   }
+
 
 }
